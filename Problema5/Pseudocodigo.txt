@@ -1,0 +1,46 @@
+Inicio 
+Definir promedio, suma, promediocurso, mejorcali, peorcali  Como Real
+Definir limestudi[28]
+mejorCali = 0
+peorCali = 10
+promedio[limestudi]
+Para (i = 0 ; i < 28 ; i = i + 1)
+   promedio[i]= aleatorio (1,10)
+   suma = suma + promedio[i]
+Fin Para
+promedioCurso = suma/limestudi
+<<"El promedio del ciclo del paralelo C: " + promedio
+<<"Estudiante con nota mas alta al promedio"
+Para (i = 0 ; i < limestudi ; i = i + 1)
+    Si promedio[i]>promedioCurso
+    <<"estudiante" +  i+1, ": " promedio[i]
+    Fin Si
+Fin Para
+<<"Estudiante con nota menor al promedio"
+Para (i = 0 ; i < limestudi ; i = i + 1)
+    Si promedio[i]<promedioCurso
+    <<"estudiante" +  i+1, ": " promedio[i]
+    Fin Si
+Fin Para
+Para (i = 0 ; i < limestudi ; i = i + 1)
+    Si promedio[i]>mejorcali entonces
+      mejorcali=promedio[i]
+    finsi
+    Si promedio[i] < peorCali entonces
+       peorcali = promedio[i]
+    Fin Si
+Fin Para
+<<"Estudiante con la mejor nota"
+Para (i = 0 ; i < limestudi ; i = i + 1)
+    Si promedio[i]==mejorcali entonces
+     <<"estudiante" +  i+1, ": " promedio[i]  
+    Finsi
+Fin Para
+<<"Estudiante con la nota mas baja"
+Para (i = 0 ; i < limestudi ; i = i + 1)
+    Si promedio[i]==peorcali entonces
+     <<"estudiante" +  i+1, ": " promedio[i]  
+    Finsi
+Fin Para
+Fin Algoritmo
+    
